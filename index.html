@@ -3,10 +3,23 @@
     <head>
         <title>Sports Modeling</title>
         <link rel="stylesheet" href="css/styles.css">
-        <script src="js/script.js"></script>
+        
     </head>
     <body>
-        <h1>League of Legends Model!</h1>
-        <div id="content"></div>
+        <h1>Welcome to Sports Modeling!</h1>
+    
+        <div>
+            <label for="player">Player:</label><br>
+            <input type="text" id="player" name="player"><br>
+            <label for="wins">Wins:</label><br>
+            <input type="number" id="wins" name="wins" min="0"><br>
+            <label for="losses">Losses:</label><br>
+            <input type="number" id="losses" name="losses" min="0"><br>
+            <button id="submit">Submit</button>
+        </div>
+        
+        <div id="results"></div>
+
+        <script src="js/script.js"></script>
     </body>
 </html>
