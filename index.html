@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Sports Modeling</title>
-        <link rel="stylesheet" href="css/styles.css">
-        
-    </head>
-    <body>
-        <h1>Welcome to Sports Modeling!</h1>
-    
-        <div>
-            <label for="player">Player:</label><br>
-            <input type="text" id="player" name="player"><br>
-            <label for="wins">Wins:</label><br>
-            <input type="number" id="wins" name="wins" min="0"><br>
-            <label for="losses">Losses:</label><br>
-            <input type="number" id="losses" name="losses" min="0"><br>
-            <button id="submit">Submit</button>
-        </div>
-        
-        <div id="results"></div>
+  <head>
+    <title>Sports Modeling</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div id="background-wrapper">
+      <div id="container">
 
-        <script src="js/script.js"></script>
-    </body>
+        <section class="module">
+          <h1>League of Legends</h1>
+          <h2>Pro Play Projected Kills Model</h2>
+  
+          <div>
+            <label for="player">Player:</label><br>
+            <input type="text" id="player" name="player" placeholder="Keria"><br>
+            <label for="wins">Wins:</label><br>
+            <input type="number" id="wins" name="wins" min="0" placeholder="2"><br>
+            <label for="losses">Losses:</label><br>
+            <input type="number" id="losses" name="losses" min="0" placeholder="0"><br>
+            <button id="submit">Submit</button>
+          </div>
+        </section>
+
+        <section class="module">
+          <div id="result">
+            <div id="result-name">Keria [ 2 - 0 ]</div>
+            <div id="result-projection">Projected Kills: 100</div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Load js last -->
+    <script src="js/script.js"></script>
+  </body>
 </html>
