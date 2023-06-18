@@ -2,11 +2,12 @@ document.addEventListener("DOMContentLoaded", function(){
 
     var images = [
         'images/DRX.jpg', 
-        'images/Asol Background.jpg', 
+        'images/AsolBackground.jpg', 
         'images/Garen.jpg',
         'images/Hecarim.jpg',
         'images/Irelia.jpg',
         'images/Rakan.jpg',
+        'images/Aatrox.jpg',
     ];
     var index = 0;
 
@@ -28,14 +29,19 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 
-
 document.getElementById('submit').addEventListener('click', function() {
 
     var player = document.getElementById('player').value;
     var wins = Number(document.getElementById('wins').value);
     var losses = Number(document.getElementById('losses').value);
 
-    // Validation check
+    // Player name input validation check
+    if (player.length == 0) {
+        alert('Please enter a player!');
+        return;
+    }
+
+    // Kills input validation check
     if (!Number.isInteger(wins) || !Number.isInteger(losses) || wins < 0 || losses < 0) {
         alert('Wins and losses must be a non negative integer!');
         return;

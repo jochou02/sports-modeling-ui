@@ -1,7 +1,12 @@
+/***********************************************************************/
+/******************* GENERIC STYLES
+/***********************************************************************/
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700;900&display=swap');
 
 :root {
-  --blue-text-color: #67cfff;
+  --blue-text-color: #88d9ff;
+  --black-background-color: rgba(0, 0, 0, 0.90);
 }
 
 * {
@@ -19,7 +24,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 #background-wrapper {
@@ -34,7 +38,6 @@ body {
   transition: background-image 1s ease-in-out; 
 }
 
-
 #container {
   display: flex;
   flex-direction: column;
@@ -47,10 +50,22 @@ body {
   position: relative;
   margin: 15px 0;
   padding: 25px 0;
-  background-color: rgba(0, 0, 0, 0.90);
+  background-color: var(--black-background-color);
   width: 700px; 
   border-radius: 10px;
 }
+
+.module2 {
+  position: relative;
+  margin: 200px 0 15px 0;
+  padding: 25px 25px;
+  width: 1100px; 
+  border-radius: 10px;
+}
+
+/***********************************************************************/
+/******************* INPUT MODULE STYLES
+/***********************************************************************/
 
 h1 {
   margin: 10px 0 10px 0;
@@ -61,6 +76,21 @@ h1 {
 h2 {
   margin: 0 0 40px 0;
   font-size: 25px;
+  font-weight: 400;
+}
+
+h3 {
+  text-align: left;
+  margin: 30px 20px; 
+  line-height: 35px;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+h4 {
+  text-align: left;
+  margin: 15px 20px;
+  font-size: 32px;
   font-weight: 400;
 }
 
@@ -127,7 +157,69 @@ input {
   color: red;
 }
 
+/***********************************************************************/
+/******************* NAVBAR STYLES
+/***********************************************************************/
 
+nav {
+  background-color: rgba(0, 0, 0, 0.90);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  font-size: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 28px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: var(--blue-text-color);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 135px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #cccccca2
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/***********************************************************************/
+/******************* LOADING ELIPSES (https://loading.io/css/)
+/***********************************************************************/
 
 .lds-ellipsis {
   display: none;
@@ -186,4 +278,37 @@ input {
   100% {
     transform: translate(24px, 0);
   }
+}
+
+/***********************************************************************/
+/******************* FOOTER
+/***********************************************************************/
+
+footer {
+  font-size: 12px;
+  position: sticky;
+  background-color: var(--black-background-color);
+  bottom: 0;
+}
+
+/***********************************************************************/
+/******************* INSIGHTS PAGE STYLES
+/***********************************************************************/
+
+table {
+  margin: 15px 20px;
+  width: 100%; 
+  border: 1px solid white; 
+  text-align: center;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid white;
+  padding: 10px;
+}
+
+img {
+  width: 100%;
+  margin: 5px 20px;
 }
