@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function(){
 
     var images = [
-        '../images/DRX.jpg', 
-        '../images/Asol Background.jpg', 
-        '../images/Garen.jpg',
-        '../images/Hecarim.jpg',
-        '../images/Irelia.jpg',
-        '../images/Rakan.jpg',
+        'images/DRX.jpg', 
+        'images/Asol Background.jpg', 
+        'images/Garen.jpg',
+        'images/Hecarim.jpg',
+        'images/Irelia.jpg',
+        'images/Rakan.jpg',
     ];
     var index = 0;
 
