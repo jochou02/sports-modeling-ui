@@ -23,31 +23,40 @@
       </nav>
 
       <div id="container">
-        <section class="module">
+
+        <section class="upper-module">
           <h1>League of Legends</h1>
           <h2>Pro Play Projected Kills Model</h2>
+        </section>
+
+        <div id="lower-container">
+
+          <section class="input-module">
+            <div>
+              <label for="player">Player:</label><br>
+              <input type="text" id="player" name="player" placeholder="e.g. Faker"><br>
+              <label for="wins">Wins:</label><br>
+              <input type="text" id="wins" name="wins" placeholder="0"><br>
+              <label for="losses">Losses:</label><br>
+              <input type="text" id="losses" name="losses" placeholder="0"><br>
+              <button id="submit">Submit</button>
+            </div>
+          </section>
   
-          <div>
-            <label for="player">Player:</label><br>
-            <input type="text" id="player" name="player" placeholder="Faker"><br>
-            <label for="wins">Wins:</label><br>
-            <input type="text" id="wins" name="wins" placeholder="0"><br>
-            <label for="losses">Losses:</label><br>
-            <input type="text" id="losses" name="losses" placeholder="0"><br>
-            <button id="submit">Submit</button>
-          </div>
-        </section>
+          <section class="graph-module">
+            <div id="result">
+              <div id="result-name"></div>
+              <div id="result-projection">Enter player to display projection!</div>
+            </div>
+            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            <div id="error-msg">Player not found!</div>
+          </section>
 
-        <section class="module">
-          <div id="result">
-            <div id="result-name"></div>
-            <div id="result-projection">Enter player to display projection!</div>
-          </div>
-          <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-          <div id="error-msg">Player not found!</div>
-        </section>
+        </div>
+
+
       </div>
-
+      
       <footer>
         Disclaimer: This website is not affiliated with League of Legends or Riot Games. The content and materials presented on this website are intended for informational purposes only. Any references to League of Legends, including images, names, and trademarks, are the property of Riot Games, Inc. While this website may feature content related to League of Legends, it is independently created and maintained. The opinions expressed herein are solely those of the website owner and do not reflect the views or opinions of Riot Games. If you have any questions or concerns regarding the content on this website, please contact me directly. Thank you for visiting! 
       </footer>

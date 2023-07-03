@@ -46,12 +46,38 @@ body {
   height: 100%;
 }
 
-.module {
+#lower-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  width: 1200px; 
+  height: 700px;
+}
+
+.upper-module {
+  position: relative;
+  margin: 15px 0;
+  padding: 15px 0;
+  background-color: var(--black-background-color);
+  width: 1200px; 
+  border-radius: 10px;
+}
+
+.input-module {
   position: relative;
   margin: 15px 0;
   padding: 25px 0;
   background-color: var(--black-background-color);
-  width: 700px; 
+  width: 400px; 
+  border-radius: 10px;
+}
+
+.graph-module {
+  position: relative;
+  margin: 15px 0;
+  padding: 25px 0;
+  background-color: var(--black-background-color);
+  width: 100%; 
   border-radius: 10px;
 }
 
@@ -74,7 +100,7 @@ h1 {
 }
 
 h2 {
-  margin: 0 0 40px 0;
+  margin: 0 0 20px 0;
   font-size: 25px;
   font-weight: 400;
 }
