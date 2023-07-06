@@ -50,7 +50,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 30px;
-  width: 1200px; 
+  width: 1000px; 
   height: 700px;
 }
 
@@ -59,7 +59,7 @@ body {
   margin: 15px 0;
   padding: 15px 0;
   background-color: var(--black-background-color);
-  width: 1200px; 
+  width: 1000px; 
   border-radius: 10px;
 }
 
@@ -306,6 +306,14 @@ li a:hover, .dropdown:hover .dropbtn {
   }
 }
 
+
+#load-msg {
+  padding: 0 20px;
+  position: absolute;
+  bottom: 5%;
+  display: none;
+}
+
 /***********************************************************************/
 /******************* FOOTER
 /***********************************************************************/
@@ -338,3 +346,52 @@ img {
   width: 100%;
   margin: 5px 20px;
 }
+
+/***********************************************************************/
+/******************* MEDIA QUERIES
+/***********************************************************************/
+
+/* 
+   Extra large devices (large laptops and desktops, over 2560px)
+   No media query since this is the default in a desktop-first approach
+*/
+
+/* Large devices (laptops/desktops, up to 2560px) */
+@media only screen and (max-width: 2560px) {
+
+}
+
+/* Medium devices (landscape tablets, up to 1200px) */
+@media only screen and (max-width: 1200px) {
+  #container {
+    /* background-color: blue; */
+  }
+  .upper-module {
+    width: 90%;
+  }
+  #lower-container {
+    width: 90%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, up to 900px) */
+@media only screen and (max-width: 900px) {
+  #container {
+    /* background-color: orange; */
+  }
+  #lower-container {
+    flex-direction: column;
+    gap: 0;
+  }
+  .input-module {
+    width: auto; 
+  }
+}
+
+/* Extra small devices (phones, up to 600px) */
+@media only screen and (max-width: 600px) {
+  #container {
+    /* background-color: green; */
+  }
+}
+

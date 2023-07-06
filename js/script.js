@@ -52,7 +52,7 @@ document.getElementById('submit').addEventListener('click', function() {
     hidePlayerNotFoundErr();
     showLoading();
     
-    fetch('https://sports-modeling.onrender.com/proj_kills', {
+    fetch('https://sports-modeling.onrender.com/player_info', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ document.getElementById('submit').addEventListener('click', function() {
     })
     .then(data => {
         document.getElementById('result-name').textContent = `${player} [ ${wins} - ${losses} ]`;
-        document.getElementById('result-projection').textContent = `Projected Kills: ${data.proj_kills}`;
+        document.getElementById('result-projection').innerHTML = `Projected Kills: ${data.proj_kills}<br>Projected Deaths: ${data.proj_deaths}`;
         
         hideLoading();
         showSubmit();
@@ -113,11 +113,13 @@ function hideOutput(){
 // Show the loading indicator
 function showLoading() {
     document.getElementsByClassName('lds-ellipsis')[0].style.display = 'block';
+    document.getElementById('load-msg').style.display = 'block';
 }
 
 // Hide loading indicator
 function hideLoading() {
     document.getElementsByClassName('lds-ellipsis')[0].style.display = 'none';
+    document.getElementById('load-msg').style.display = 'none';
 }
 
 // Show submit button

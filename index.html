@@ -3,6 +3,7 @@
   <head>
     <title>Sports Modeling</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   </head>
   <body>
     <div id="background-wrapper">
@@ -26,7 +27,7 @@
 
         <section class="upper-module">
           <h1>League of Legends</h1>
-          <h2>Pro Play Projected Kills Model</h2>
+          <h2>Professional Play Kills Projection Model</h2>
         </section>
 
         <div id="lower-container">
@@ -49,6 +50,7 @@
               <div id="result-projection">Enter player to display projection!</div>
             </div>
             <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            <div id="load-msg">Please note: The backend for this site is hosted on Render.com, which automatically shuts down our servers during periods of inactivity to save resources. The first request after a quiet period might take a bit longer to load while the server spins back up. Thanks for your patience!</div>
             <div id="error-msg">Player not found!</div>
           </section>
 
