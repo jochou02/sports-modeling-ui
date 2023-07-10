@@ -27,7 +27,7 @@ body {
 }
 
 #background-wrapper {
-  /* background-image: url("../images/DRX.jpg"); */
+  background-image: url("../images/DRX.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
@@ -48,7 +48,7 @@ body {
 
 #lower-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 20px;
   width: 1000px; 
   height: 700px;
@@ -63,23 +63,17 @@ body {
   border-radius: 10px;
 }
 
-.upper-module a {
-  margin-top: 50px;
-  color: white;
-}
-
 .input-module {
   position: relative;
-  margin: 15px 0;
   padding: 25px 0;
   background-color: var(--black-background-color);
-  width: 400px; 
+  width: 100%; 
   border-radius: 10px;
 }
 
 .graph-module {
   position: relative;
-  margin: 15px 0;
+  margin: 0px 0;
   padding: 25px 0;
   background-color: var(--black-background-color);
   width: 100%; 
@@ -126,7 +120,7 @@ h4 {
 }
 
 input {
-  font-size: 25px;
+  font-size: 18px;
   color: white;
   width: 80%;
   padding: 12px 20px;
@@ -319,38 +313,6 @@ li a:hover, .dropdown:hover .dropbtn {
   display: none;
 }
 
-/***********************************************************************/
-/******************* FOOTER
-/***********************************************************************/
-
-footer {
-  font-size: 12px;
-  position: sticky;
-  background-color: var(--black-background-color);
-  bottom: 0;
-}
-
-/***********************************************************************/
-/******************* INSIGHTS PAGE STYLES
-/***********************************************************************/
-
-table {
-  margin: 15px 20px;
-  width: 100%; 
-  border: 1px solid white; 
-  text-align: center;
-  border-collapse: collapse;
-}
-
-th, td {
-  border: 1px solid white;
-  padding: 10px;
-}
-
-img {
-  width: 100%;
-  margin: 5px 20px;
-}
 
 /***********************************************************************/
 /******************* MEDIA QUERIES

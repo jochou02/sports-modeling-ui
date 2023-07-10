@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sports Modeling</title>
+    <link rel="stylesheet" href="css/teams.css">
+  </head>
+  <body>
+    <div id="background-wrapper">
+
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="https://johnchou.xyz/" target="_blank">My Website</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Sourcecode</a>
+            <div class="dropdown-content">
+              <a href="https://github.com/jochou02/sports-modeling-ui" target="_blank">Frontend</a>
+              <a href="https://github.com/jochou02/sports-modeling-api" target="_blank">Backend</a>
+            </div>
+          </li>
+          <li><a href="insights.html">Betting Insights</a></li>
+        </ul>
+      </nav>
+
+      <div id="container">
+
+
+
+        <div id="lower-container">
+
+          <section class="upper-module">
+            <h1>Team Projections</h1>
+          </section>
+
+          <section class="input-module">
+            <div>
+              <label for="team">Team:</label><br>
+              <input list="teams" type="text" id="team" name="team" placeholder="e.g. T1"><br>
+              <datalist id="teams"></datalist>
+              <label for="wins">Wins:</label><br>
+              <input type="text" id="wins" name="wins" placeholder="0"><br>
+              <label for="losses">Losses:</label><br>
+              <input type="text" id="losses" name="losses" placeholder="0"><br>
+              <button id="submit">Submit</button>
+            </div>
+          </section>
+  
+          <section class="graph-module">
+            <div id="result">
+              <div id="result-name"></div>
+              <div id="result-projection">Enter team to display projections!</div>
+            </div>
+            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            <div id="error-msg">Player not found!</div>
+          </section>
+
+        </div>
+
+
+      </div>
+      
+
+    </div>
+
+    <!-- Load js last -->
+    <script src="js/teams.js"></script>
+  </body>
+</html>

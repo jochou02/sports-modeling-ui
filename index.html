@@ -28,6 +28,7 @@
         <section class="upper-module">
           <h1>League of Legends</h1>
           <h2>Professional Play Kills Projection Model</h2>
+          <a href="/teams.html">Switch to team projections!</a>
         </section>
 
         <div id="lower-container">
@@ -35,7 +36,8 @@
           <section class="input-module">
             <div>
               <label for="player">Player:</label><br>
-              <input type="text" id="player" name="player" placeholder="e.g. Faker"><br>
+              <input list="players" type="text" id="player" name="player" placeholder="e.g. Faker"><br>
+              <datalist id="players"></datalist>
               <label for="wins">Wins:</label><br>
               <input type="text" id="wins" name="wins" placeholder="0"><br>
               <label for="losses">Losses:</label><br>
