@@ -86,6 +86,11 @@ body {
   border-radius: 10px;
 }
 
+#graph {
+  width: 95%;
+  margin: auto;
+}
+
 .module2 {
   position: relative;
   margin: 200px 0 15px 0;

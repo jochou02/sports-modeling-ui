@@ -62,6 +62,7 @@ document.getElementById('submit').addEventListener('click', function() {
     hideOutput();
     hideSubmit();
     hidePlayerNotFoundErr();
+    hideGraph();
     showLoading();
     
     fetch('https://sports-modeling.onrender.com/player_info', {
@@ -85,7 +86,56 @@ document.getElementById('submit').addEventListener('click', function() {
         document.getElementById('result-name').textContent = `${player} [ ${wins} - ${losses} ]`;
         document.getElementById('result-projection').innerHTML = `Projected Kills: ${data.proj_kills}<br>Projected Deaths: ${data.proj_deaths}`;
         
+        var playerData = data.player_data;
+
+        var playerData = data.player_data;
+
+        // Sort playerData by date in descending order and select only the last 10 entries
+        playerData.sort((a, b) => new Date(b.Date) - new Date(a.Date));
+        playerData = playerData.slice(0, 20);
+    
+        // Reverse the array to have the earliest of those on the left
+        playerData.reverse();
+    
+        // Assign an id to each row
+        playerData.forEach((game, i) => game.id = i);
+    
+        var victoryData = playerData
+            .filter(game => game.Result === 'Victory')
+            .map(game => ({ x: game.id, y: game.Kills, date: new Date(game.Date).toLocaleDateString() }));
+    
+        var defeatData = playerData
+            .filter(game => game.Result === 'Defeat')
+            .map(game => ({ x: game.id, y: game.Kills, date: new Date(game.Date).toLocaleDateString() }));
+    
+        var data = [{
+            x: victoryData.map(game => game.x),
+            y: victoryData.map(game => game.y),
+            name: 'Victories',
+            type: 'bar',
+            marker: { color: 'green' },
+            hovertemplate: victoryData.map(game => `${game.y} Kills<br>${game.date}<extra></extra>`) // Custom hovertemplate
+        },
+        {
+            x: defeatData.map(game => game.x),
+            y: defeatData.map(game => game.y),
+            name: 'Defeats',
+            type: 'bar',
+            marker: { color: 'red' },
+            hovertemplate: defeatData.map(game => `${game.y} Kills<br>${game.date}<extra></extra>`) // Custom hovertemplate
+        }];
+    
+        var layout = {
+            title: 'Kills - Last 20 Games',
+            xaxis: { title: 'Matches' },
+            yaxis: { title: 'Kills' },
+            barmode: 'group' // Each bar is separate, not stacked
+        };
+    
+        Plotly.newPlot('graph', data, layout);
+
         hideLoading();
+        showGraph();
         showSubmit();
         showOutput();
     })
@@ -142,6 +192,16 @@ function showPlayerNotFoundErr() {
 // Hide submit button
 function hidePlayerNotFoundErr() {
     document.getElementById('error-msg').style.display = 'none';   
+}
+
+// Show graph
+function showGraph() {
+    document.getElementById('graph').style.visibility = 'visible';
+}
+
+// Hide graph
+function hideGraph() {
+    document.getElementById('graph').style.visibility = 'hidden'; 
 }
 
 /*
